@@ -284,6 +284,17 @@ a.patreon-button {
     font-size: 1.3rem;
 }
 
+a.gh-button {
+    margin: 0;
+    padding: 14px 45px;
+    width: 300px;
+    text-align: center;
+    border: 0;
+    color: #ffffff;
+    background-color: #010101;
+    font-size: 1.3rem;
+}
+
 i.fab-margin {
     margin-right: 10px;
     font-size: 90%;
