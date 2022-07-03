@@ -1,0 +1,454 @@
+body {
+    font-family: 'Glacial Indifference';
+    color: #3E3E3E;
+    background: linear-gradient(45deg, #e23bf7, #5302f4, #d033ff);
+    background-size: 1200% 1200%;
+    animation: GradientBackground 20s ease infinite;
+}
+
+@keyframes GradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+div.body-wrapper {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 45px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 2.6rem;
+    transform: skewX(-8deg);
+    color: white;
+}
+
+header h1 a {
+    color: #ffffff;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: auto;
+    font-size: 1.3rem;
+    gap: 30px;
+}
+
+a {
+    transition: 0.2s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+div.snap-container {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    background: linear-gradient(155deg, #ffffff00 185px, white 185px, white 93%, #ffffff00 0%);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100vh;
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 0 55px;
+}
+
+/* Top */
+
+div.catch {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 25px;
+}
+
+p.bold-box {
+    font-size: 170%;
+    font-weight: bold;
+    border: 2px solid #3E3E3E;
+    padding: 7px 12px;
+}
+
+div.inochi2d-catch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inochi2d-catch img {
+    width: 200px;
+}
+
+.inochi2d-catch p {
+    font-size: 70%;
+    letter-spacing: 0.17rem;
+}
+
+.inochi2d-catch p.kana {
+    color: #DC00A3;
+    margin-left: 53px;
+}
+
+.inochi2d-catch p.eng {
+    color: #999999;
+    margin-right: 22px;
+}
+
+p.bold-txt {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/* General Description Pages */
+section h1 {
+    padding-bottom: 45px;
+    align-self: start;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: 0 0 1px black
+}
+
+div.content {
+    display: flex;
+    gap: 0 50px;
+}
+
+div.section-box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+p.description {
+    letter-spacing: 0.03rem;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+
+p.japanese {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 1.04rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+p.mini-text a {
+    text-decoration: underline;
+}
+
+/* About */
+p.credit {
+    font-size: 0.9rem;
+    padding-top: 10px;
+}
+
+section#about div.section-box {
+    flex: 1;
+}
+
+div.about-image {
+    flex: 2.7;
+}
+
+div.about-image img {
+    width: 100%;
+}
+
+/* Gallery */
+.gallery ul {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    gap: 0 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery li {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    scroll-snap-align: start;
+}
+
+.gallery li img {
+    height: 40vw;
+    max-height: 500px;
+}
+
+section#gallery div.section-box {
+    width: 100%;
+}
+
+/* Download */
+section#download div.section-box {
+    flex: 1;
+}
+
+section#download div.content::after {
+    content: "";
+    border-right: solid 1px #3E3E3E;
+    height: 100%;
+}
+
+section#download div.content {
+    align-items: center;
+    gap: 0 14%;
+}
+
+div.download-box {
+    justify-content: space-around;
+    order: 2;
+}
+
+h2.package-title {
+    margin: 0;
+    font-size: 2.3rem;
+}
+
+div.download-list {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+p.version {
+    font-size: 1.4rem;
+}
+
+a.download-button {
+    font-size: 1.15rem;
+    padding: 8px 45px;
+    border: solid 1px #3E3E3E;
+    border-radius: 30px;
+    margin-left: 40px;
+}
+
+div.package-box p.mini-text {
+    font-size: 95%;
+    margin-top: 10px;
+}
+
+/* Donate */
+img.ada-chan {
+    width: 200px;
+    margin: 0 auto;
+}
+
+section#donate div.section-box {
+    flex: 1;
+    justify-content: center;
+}
+
+a.patreon-button {
+    margin: 0;
+    padding: 14px 45px;
+    width: 300px;
+    text-align: center;
+    border: 0;
+    color: #ffffff;
+    background-color: #ff424d;
+    font-size: 1.3rem;
+}
+
+i.fab-margin {
+    margin-right: 10px;
+    font-size: 90%;
+}
+
+/* resposive */
+@media screen and (max-width: 1024px) {
+    div.catch {
+        font-size: 1.5rem;
+        flex-direction: column;
+    }
+
+    .inochi2d-catch img {
+        width: 165px;
+    }
+
+    div.inochi2d-catch {
+        margin: 15px 0;
+    }
+
+    div.inochi2d-catch p {
+        opacity: 0.5;
+    }
+
+    div.about-image {
+        flex: 1;
+    }
+
+    section#download div.content {
+        gap: 0 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    div.snap-container {
+        background: linear-gradient(150deg, #ffffff00 160px, white 160px, white 93%, #ffffff00 0%);
+    }
+
+    section {
+        padding: 0 36px;
+        padding-top: 15vh;
+    }
+
+    section h1 {
+        font-size: 2.9rem;
+        padding-bottom: 26px;
+    }
+
+    div.content {
+        flex-direction: column;
+        gap: 30px 0px;
+    }
+
+    div.about-image img {
+        width: 72vw;
+    }
+
+    section#download div.content {
+        flex-direction: column;
+        gap: 6% 0;
+        align-items: flex-end;
+    }
+
+    h2.package-title {
+        font-size: 1.9rem;
+    }
+
+    div.section-box {
+        gap: 40px;
+    }
+
+    a.download-button {
+        margin-left: 74px;
+    }
+
+    section#donate div.section-box {
+        justify-content: center;
+    }
+
+    a.download-button.patreon-button {
+        margin: 0;
+    }
+
+    img.ada-chan {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        padding: 19px;
+    }
+
+    header h1 {
+        font-size: 1.85rem;
+    }
+
+    section {
+        padding: 0 20px;
+        padding-top: 4vh;
+    }
+
+    section h1 {
+        font-size: 2.6rem;
+    }
+
+    div.snap-container {
+        background: linear-gradient(160deg, #ffffff00 105px, white 105px, white 93%, #ffffff00 0%);
+    }
+
+    p.description {
+        font-size: 1.1rem;
+    }
+
+    p.japanese {
+        font-size: 0.95rem;
+    }
+
+    p.version {
+        font-size: 1.15rem;
+    }
+
+    section#download div.content {
+        align-items: flex-start;
+    }
+
+    h2.package-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    p.description {
+        font-size: 0.9rem;
+    }
+
+    div.section-box {
+        gap: 20px;
+    }
+
+    section#download div.content {
+        gap: 4% 0;
+    }
+
+    img.ada-chan {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section h1 {
+        font-size: 2.3rem;
+    }
+}
