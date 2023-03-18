@@ -1,0 +1,2 @@
+include: [".well-known"]
+keep_files: [".well-known/org.flathub.VerifiedApps.txt"]
