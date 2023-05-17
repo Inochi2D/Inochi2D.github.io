@@ -262,6 +262,30 @@ div.package-box p.mini-text {
     margin-top: 10px;
 }
 
+/* Documentation */
+section#documentation p.links {
+    text-align: center;
+}
+
+section#documentation p.links a {
+    display: inline-block;
+    margin: 10px 30px;
+    padding: 14px 45px;
+    min-width: 300px;
+    text-align: center;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+section#documentation p.links a.documentation-button {
+    background-color: #e23bf7;
+}
+
+section#documentation p.links a.discord-button {
+    background-color: #21304e;
+}
+
 /* Donate */
 img.ada-chan {
     width: 200px;
