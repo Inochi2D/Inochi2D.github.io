@@ -35,7 +35,7 @@ draft = false
                         
                         <div class="card__footer  stack  stack--thin">
                             <a href="#" class="button  js-os-download">Try for Windows</a>
-                            <a href="#" class="button  button--primary">Buy Inochi Creator</a>
+                            <button id="creator_button" class="button  button--primary">Buy Inochi Creator</button>
                         </div>
 
                     </div>
@@ -86,3 +86,12 @@ draft = false
         
     </div>
 </article>
+
+<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+<script type="text/javascript">
+    Itch.attachBuyButton(document.getElementById("creator_button"), {
+        // replace the following with the correct information about your game
+        user: "lunafoxgirlvt",
+        game: "inochi-creator"
+    });
+</script>
