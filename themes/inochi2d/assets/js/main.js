@@ -114,6 +114,7 @@ function checkOS() {
             htmlEl.classList.add("is-ios");
             return "ios";
         case "linux":
+        case "linux x86_64":
         case "wayland":
         case "x11":
             htmlEl.classList.add("is-linux");
