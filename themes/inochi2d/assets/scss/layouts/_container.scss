@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    max-width: $breakpoint-lg;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-prose {
+    max-width: 65ch;
+}

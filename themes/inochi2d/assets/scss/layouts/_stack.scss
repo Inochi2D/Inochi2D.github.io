@@ -1,0 +1,83 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stack--center {
+    align-items: center;
+}
+
+.stack--horizontal {
+    flex-direction: row;
+
+    &.stack--center {
+        justify-content: center;
+    }
+
+}
+
+.stack--thin {
+    gap: 8px;
+}
+
+.stack--thick {
+    gap: 32px;
+}
+
+.stack--thicker {
+    gap: 48px;
+}
+
+.stack-no-gap {
+    gap: 0;
+}
+
+@each $size, $width in $breakpoints {
+
+    @media screen and (min-width: $width) {
+    
+        .stack\@#{$size} {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .stack--center\@#{$size} {
+            align-items: center;
+        }
+        
+        .stack--horizontal\@#{$size} {
+            flex-direction: row;
+        
+            &.stack--center\@#{$size} {
+                align-items: unset;
+                justify-content: center;
+            }
+        
+        }
+        
+        .stack--horizontal\@#{$size} {
+            flex-direction: row;
+        }
+
+        .stack--thin\@#{$size} {
+            gap: 8px;
+        }        
+        
+        .stack--thick\@#{$size} {
+            gap: 32px;
+        }
+        
+        .stack--thicker\@#{$size} {
+            gap: 48px;
+        }
+        
+
+        .stack-no-gap\@#{$size} {
+            gap: 0;
+        }
+
+    }
+
+}

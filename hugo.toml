@@ -1,0 +1,4 @@
+baseURL = 'https://inochi2d.com/'
+languageCode = 'en-us'
+title = 'Inochi2D'
+theme = 'inochi2d'

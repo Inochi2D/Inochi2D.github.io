@@ -1,0 +1,33 @@
+
+.h0 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.05em;
+}
+
+h1, h2, h3 {
+    color: #374151;
+    letter-spacing: -0.04em;
+}
+
+h1, .h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+h2, .h2 {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+h3, .h3 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+@media screen and (min-width: $breakpoint-md) {
+    .h0 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+}

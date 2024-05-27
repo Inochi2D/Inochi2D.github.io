@@ -1,0 +1,45 @@
+
+.card-holder {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 0;
+        right: 0;
+        top: 100px;
+        height: 200px;
+        background-image: linear-gradient(to right, #7c3aed, #db2777);
+        transform: skewY(-5deg);
+        z-index: -1;
+    }
+
+}
+
+.card {
+    position: relative;
+    padding: 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: flex;
+    background-color: white;
+}
+
+.card__content {
+    height: 100%;
+}
+
+.card__body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .card {
+        padding: 32px;
+    }
+}

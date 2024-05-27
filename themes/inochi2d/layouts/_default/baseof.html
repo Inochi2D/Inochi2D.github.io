@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="site">
+  <div class="site__body">
+  <header class="site-header">
+    <div class="container  site-header__container">
+      {{ partial "header.html" . }}
+    </div>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  </div>
+  <footer class="site-footer">
+    <div class="site-footer__body">
+      <div class="container">
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  {{ partialCached "foot/js.html" . }}
+</body>
+</html>

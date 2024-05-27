@@ -1,0 +1,47 @@
+
+<div class="stack  stack--thick">
+    <div class="grid  grid--col-3@md">
+        <nav class="site-footer__menu">
+            <h1>Navigation</h1>
+            {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+            {{ partial "menu.html" (dict "menuID" "secondary" "page" .) }}
+        </nav>
+        <nav class="site-footer__menu">
+            <h1>Support Inochi2D</h1>
+            <ul>
+                <li>
+                    <a href="https://github.com/sponsors/LunaTheFoxgirl" rel="external" target="_blank">
+                        GitHub Sponsor
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.patreon.com/m/LunaFoxgirlVT" rel="external" target="_blank">
+                        Patreon
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="site-footer__menu">
+            <h1>Social</h1>
+            <ul>
+                <li>
+                    <a href="https://discord.com/invite/abnxwN6r9v" rel="external" target="_blank" title="Link to Inochi2D Discord Server">
+                        Discord
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Inochi2D/inochi2d" rel="external" target="_blank">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/inochi2d" rel="external" target="_blank">
+                        X (formerly Twitter)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <p>Copyright {{ now.Year }}. All rights reserved.</p>
+</div>

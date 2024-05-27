@@ -1,0 +1,40 @@
+
+.site-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: 72px;
+}
+
+.site-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    h1 {
+        font-size: 20px;
+        font-style: italic;
+        letter-spacing: -0.02em;
+    }
+}
+
+.site-header__right {
+    position: relative;
+}
+
+@media screen and (min-width: $breakpoint-md) {
+    
+    .site-header {
+        justify-content: flex-start;
+    }
+
+    .site-header__left {
+        flex-shrink: 0;
+    }
+
+    .site-header__right {
+        width: 100%;
+    }
+
+}

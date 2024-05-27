@@ -1,0 +1,12 @@
+@media (prefers-reduced-motion: no-preference) {
+
+    @keyframes VTubingStickmanAnimation {
+        from { d: path("M17 33.5C18 30.8333 21.6 25.5 28 25.5C34.4 25.5 37.3333 20.5 38 18");  }
+        to { d: path("M17 33.5C18 30.8333 21.6 25.5 28 25.5C34.4 25.5 38 23 40.5 20.5");  }
+    }
+
+    #vtubing-stickman {
+        animation: VTubingStickmanAnimation 1s ease-in-out infinite alternate;
+    }
+
+}

@@ -1,0 +1,173 @@
+.hero {
+    position: relative;
+    width: 100%;
+    padding-top: 64px;
+    padding-bottom: 48px;
+    overflow: hidden;
+
+    .button {
+        transform: skewX(-10deg);
+
+        span {
+            display: inline-flex;
+            transform: skewX(10deg);
+        }
+
+    }
+
+}
+
+.hero__body {
+    position: relative;
+    max-width: 480px;
+    z-index: 1;
+    
+    p {
+        text-wrap: pretty;
+    }
+
+}
+
+.hero__button--primary {
+    filter: hue-rotate(-30deg);
+    animation: heroButtonPrimaryAnimation 10s linear infinite;
+}
+
+.hero__image {
+    position: relative;
+    margin-top: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    img {
+        border-radius: 6px;
+    }
+
+}
+
+.hero__divider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -100px;
+    height: 200px;
+    background-color: black;
+    background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899, #f97316, #ec4899, #a855f7, #6366f1, #a855f7, #ec4899, #f97316, #ec4899);
+    transform: skewY(-5deg);
+    background-size: 500% 100%;
+    z-index: -1;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 0;
+        bottom: 0;
+        height: 50%;
+        width: 50%;
+        backdrop-filter: hue-rotate(-20deg) brightness(1.2);
+        opacity: .5;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 25%;
+        top: 0;
+        height: 50%;
+        width: 50%;
+        backdrop-filter: hue-rotate(20deg) brightness(1.1);
+        opacity: .5;
+    }
+
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+
+    .hero {
+        padding-top: 128px;
+        padding-bottom: 25%;
+        overflow: hidden;
+    }
+
+    .hero__body {
+        width: 50%;
+        max-width: none;
+        padding-right: 16px;
+    }
+
+    .hero__image {
+        position: static;
+        padding: 0;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(50% - 48px);
+            margin-left: 16px;
+            height: auto;
+            transform: translateY(-50%);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    }
+
+    .hero__divider {
+        top: auto;
+        margin: 0;
+        bottom: 0;
+        transform-origin: left bottom;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero {
+        padding-bottom: 20%;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .hero {
+        padding-bottom: 17.5%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    @keyframes heroButtonPrimaryAnimation {
+        from { filter: hue-rotate(-30deg); }
+        16%  { filter: hue-rotate(  0deg); }
+        33%  { filter: hue-rotate( 40deg); }
+        50%  { filter: hue-rotate(100deg); }
+        66%  { filter: hue-rotate( 40deg); }
+        83%  { filter: hue-rotate(  0deg); }
+        to   { filter: hue-rotate(-30deg); }
+    }
+
+    @keyframes heroDividerAnimation {
+        from { background-position: 0% 0%; }
+        to { background-position: 75% 0%; }
+    }
+
+    @keyframes heroDividerPartAnimation {
+        from { transform: translateX(100vw); }
+        to { transform: translateX(-100vw);}
+    }
+
+    .hero__button--primary {
+        animation: heroButtonPrimaryAnimation 10s linear infinite;
+    }
+
+    .hero__divider {
+        animation: heroDividerAnimation 10s linear infinite;
+
+        &::before,
+        &::after {
+            animation: heroDividerPartAnimation 20s linear infinite;
+        }
+
+    }
+
+}

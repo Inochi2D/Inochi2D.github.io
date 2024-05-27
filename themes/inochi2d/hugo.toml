@@ -1,0 +1,33 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'About'
+url = '/#about'
+weight = 11
+
+[[menus.main]]
+name = 'Gallery'
+url = '/#gallery'
+weight = 12
+
+[[menus.secondary]]
+name = 'Download'
+url = '/download'
+weight = 12
+
+[[menus.secondary]]
+name = 'Donate'
+url = 'https://github.com/sponsors/LunaTheFoxgirl'
+weight = 20
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

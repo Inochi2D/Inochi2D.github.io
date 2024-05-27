@@ -1,0 +1,18 @@
+
+$font-small-size: .875rem;
+
+/* Breakpoints */
+
+$breakpoint-sm: 480px;
+$breakpoint-md: 640px;
+$breakpoint-lg: 960px;
+
+$breakpoints: (
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg
+);
+
+/* Animations */
+
+$cubic-ease-out: cubic-bezier(.1,.7,.1,1);
