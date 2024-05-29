@@ -1,0 +1,5 @@
+# com.Inochi2D.InochiCreator
+f84fffc6-75c8-4dd5-a8f3-1a5474849c11
+
+# com.Inochi2D.InochiSession
+6abb7926-ff9a-4faa-8aa4-2794c2cb93c2
