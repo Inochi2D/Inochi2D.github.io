@@ -68,9 +68,14 @@ details summary {
   padding-bottom: 8px;
 }
 
+small,
+.small {
+  font-size: 14px;
+}
+
 .h0 {
   font-size: 48px;
-  line-height: 48px;
+  line-height: 56px;
   letter-spacing: -0.05em;
 }
 
@@ -81,12 +86,12 @@ h1, h2, h3 {
 
 h1, .h1 {
   font-size: 40px;
-  line-height: 40px;
+  line-height: 48px;
 }
 
 h2, .h2 {
   font-size: 32px;
-  line-height: 32px;
+  line-height: 40px;
 }
 
 h3, .h3 {
@@ -811,6 +816,59 @@ button {
   }
   #menu-secondary {
     background-color: transparent;
+  }
+}
+.article {
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article__header {
+  text-align: center;
+}
+
+.article__content img {
+  display: block;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+.article__author {
+  text-align: center;
+}
+.article__author p {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+.article__author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.article__featured-image {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+.article__featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 960px) {
+  .article__featured-image {
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .article__featured-image {
+    margin-left: -96px;
+    margin-right: -96px;
   }
 }
 .site-header__container {

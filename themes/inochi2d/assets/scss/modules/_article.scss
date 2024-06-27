@@ -1,0 +1,63 @@
+.article {
+
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .article__header {
+        text-align: center;
+    }
+
+    .article__content {
+        img {
+            display: block;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            max-width: 100%;
+        }
+    }
+
+    .article__author {
+
+        text-align: center;
+
+        p {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 8px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 48px;
+        }
+
+    }
+
+    .article__featured-image {
+        margin-left: -24px;
+        margin-right: -24px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+    
+@media screen and (min-width: $breakpoint-lg) {
+    .article__featured-image {
+        margin-left: -48px;
+        margin-right: -48px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+    .article__featured-image {
+        margin-left: -96px;
+        margin-right: -96px;
+    }
+}

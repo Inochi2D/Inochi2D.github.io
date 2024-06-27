@@ -17,6 +17,11 @@ name = 'Gallery'
 url = '/#gallery'
 weight = 12
 
+[[menus.main]]
+name = 'Blog'
+url = '/blog'
+weight = 13
+
 [[menus.secondary]]
 name = 'Download'
 url = '/download'

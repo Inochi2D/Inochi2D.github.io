@@ -1,10 +1,32 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  <article class="container  article">
+    <header class="article__header  section  stack  stack--thick">
+      <div class="stack  stack--thin">
+        <h1>{{ .Title }}</h1>
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      </div>
+      {{ with .Params.author }}
+        <div class="article__author">
+          <a href="https://github.com/{{ . }}" title="Link to {{ . }}'s GitHub Page" target="_blank" rel="external">
+            <p class="small"><span class="screen-reader-text">by</span> <img src="https://github.com/{{ . }}.png?size=96" alt="{{ . }}'s GitHub avatar"> @{{ . }}</p>
+          </a>
+        </div>
+      {{ end }}
+    </header>
+    <div class="section  article__content">
+      {{ $featuredImg := .Params.featured_img }}
+      {{ $featuredImgAlt := .Params.featured_img_alt }}
+      {{ with $featuredImg }}
+        <div class="article__featured-image">
+          <img src="{{ . }}" alt="{{ $featuredImgAlt }}">
+        </div>
+      {{ end }}
+      {{ .Content }}
+    </div>
+    <footer class="section">
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </footer>
+  </article>
 {{ end }}

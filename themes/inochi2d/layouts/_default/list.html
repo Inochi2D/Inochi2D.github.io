@@ -1,10 +1,20 @@
 {{ define "main" }}
   <div class="container">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+    <header class="section">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="section">
+      {{ .Content }}
+      {{ if gt (len .Pages) 0 }}
+        {{ range .Pages }}
+          <article class="section  stack  stack--thin">
+            <h2 class="h3"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            <p class="small">{{ .Date | time.Format ":date_long" }}</p>
+          </article>
+        {{ end }}
+      {{ else }}
+          <p>There are no posts currently. Check back soon!.</p>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
