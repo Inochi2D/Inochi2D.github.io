@@ -22,6 +22,11 @@ name = 'Blog'
 url = '/blog'
 weight = 13
 
+[[menus.main]]
+name = 'Wiki'
+url = 'https://i2d.richardn.me/en:start'
+weight = 14
+
 [[menus.secondary]]
 name = 'Download'
 url = '/download'
